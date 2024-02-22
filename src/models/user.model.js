@@ -7,8 +7,9 @@ const userSchema = new mongoose.Schema({
         unique: true
     },
     dateOfBirth: {
-        type: String,
-        required: true
+        type: Date,
+        required: true,
+        trim: true,
     },
     email:  {
         type: String,
@@ -16,7 +17,7 @@ const userSchema = new mongoose.Schema({
         unique: true
     },
     phoneNo: {
-        type: Number,
+        type: String,
         required: true,
         unique: true
     }
